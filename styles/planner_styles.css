@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cfcfcf;
+    border-radius: 7px;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#screen_container {
+    height: 100%;
+    width: 100%;
+}
+
+#calendar_container {
+    position: absolute;
+    height: 100%;
+    width: 67%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#calendar_header {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid white;
+}
+
+#calendar_content_container {
+    height: 90%;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #E7F2F8;
+}
+
+#create_details_container {
+    position: relative;
+    left: 67%;
+    height: 100%;
+    width: 33%;
+
+    background-color: #74BDCB;
+    color: black;
+    font-size: 18pt;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#create_container {
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
+#create_event_form {
+    display: block;
+}
+
+#create_event_form.hide {
+    display: none;
+}
+
+#submit_button {
+    display: block;
+    margin-top: 20px;
+    font-size: 18pt;
+}
+
+#submit_button.hide {
+    display: none;
+}
+
+#details_container {
+    width: 100%;
+    height: 50%;
+
+    border-top: 1px solid white;
+}
+
+.validation_message {
+    display: block;
+    color: red;
+}
+
+.validation_message.hide {
+    display: none;
+}
+
+.timeslot_container {
+    height: 50px;
+    width: 100%;
+
+    border-bottom: 1px solid white;
+}
+
+.timeslot_label_container {
+    position: absolute;
+    height: 50px;
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid white;
+}
+
+.timeslot_label_container p {
+    font-size: 2vw;
+}
+
+.timeslot_content_container {
+    position: relative;
+    left: 20%;
+    height: 50px;
+    width: 80%;
+}
+
+.timeslot_content_container.active {
+    background-color: #FFA384;
+}
+
+.day {
+    height: 16.6666%;
+    width: 14.2857%;
+
+    background-color: #74BDCB;
+    border: 1px solid #E7F2F8;
+    border-radius: 10%;
+}
+
+.day.hide {
+    background-color: #E7F2F8;
+}
+
+.day.active {
+    background-color: #FFA384;
+}
+
+.day p {
+    color: black;
+}
+
+.day_number {
+    margin: 10%;
+    font-size: 20px;
+}
+
+.day_events {
+    margin: 10%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.calendar_event {
+    width: 100%;
+    height: 15px;
+
+    white-space: nowrap;
+}
+
+.calendar_event.meeting {
+    background-color: #e7f2f8;
+}
+
+.calendar_event.call {
+    background-color: #ffa384;
+}
+
+.calendar_event.out_of_office {
+    background-color: #efe7bc;
+}
+
+.adjustments_container {
+    height: 65%;
+    width: 100%;
+
+    color: white;
+    background-color: #74BDCB;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.adjustments_container div {
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.adjustments_container div p {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 2.3%;
+
+    height: 100%;
+    width: 90%;
+}
+
+.arrow_container {
+    height: 100%;
+    width: 10%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.arrow_container div {
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day_name_container {
+    height: 35%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.day_name_container div {
+    height: 100%;
+    width: 14.2857%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#details_table {
+    display: block;
+}
+
+#details_table.hide {
+    display: none;
+}
+
+#delete_button {
+    display: block;
+    margin-top: 20px;
+    font-size: 18pt;
+}
+
+#delete_button.hide {
+    display: none;
+}

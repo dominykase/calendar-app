@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planner</title>
+        <link rel="stylesheet" href="./styles/planner_styles.css">
+    </head>
+	<body>
+	
+	<div id="screen_container">
+        <div id="calendar_container">
+            <div id="calendar_header">
+                <div class="adjustments_container">
+                    <div>
+                        <p id="month_field"></p>
+                        <div class="arrow_container">
+                            <div><p id="month_top_arrow">+</p></div>
+                            <div><p id="month_bottom_arrow">-</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="year_field"></p>
+                        <div class="arrow_container">
+                            <div><p id="year_top_arrow">+</p></div>
+                            <div><p id="year_bottom_arrow">-</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day_name_container">
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                    <div>Sunday</div>
+                </div>
+            </div>
+            <div id="calendar_content_container">
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+                <div class="day"><p class="day_number"></p><div class="day_events"></div></div>
+            </div>
+        </div>
+        <div id="create_details_container">
+            <div id="create_container">
+                <table class="hide" id="create_event_form">
+                    <tr>
+                        <td>
+                            <label for="title">Title:</label>
+                        </td>
+                        <td>
+                            <input name="title" type="text" id="title_field" maxlength="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="validation_message hide"></p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="date">Date:</label>
+                        </td>
+                        <td>
+                            <input name="date" type="date" id="date_field">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="validation_message hide"></p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="starttime">Start time:</label>
+                        </td>
+                        <td>
+                            <input name="starttime" type="time" id="start_time_field">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="validation_message hide"></p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="endtime">End time:</label>
+                        </td>
+                        <td>
+                            <input name="endtime" type="time" id="end_time_field">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="validation_message hide">This is a validation message</p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="type">Type:</label>
+                        </td>
+                        <td>
+                            <select name="type" id="type_field">
+                                <option value="meeting">Meeting</option>
+                                <option value="call">Call</option>
+                                <option value="out_of_office">Out of office</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="description">Description:</label>
+                        </td>
+                        <td>
+                            <input name="description" type="text" id="description_field">
+                        </td>
+                    </tr>
+                </table>
+                <button class="hide" id="submit_button">Create event</button>
+            </div>
+            <div id="details_container">
+                <table class="hide" id="details_table">
+                    <tr>
+                        <td>
+                            <p>Title:</p>
+                        </td>
+                        <td>
+                            <p class="details_field"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Date:</p>
+                        </td>
+                        <td>
+                            <p class="details_field"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Start time:</p>
+                        </td>
+                        <td>
+                            <p class="details_field"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>End time:</p>
+                        </td>
+                        <td>
+                            <p class="details_field"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Type:</p>
+                        </td>
+                        <td>
+                            <p class="details_field"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Description:</p>
+                        </td>
+                        <td>
+                            <p class="details_field">
+                        </td>
+                    </tr>
+                </table>
+                <button class="hide" id="delete_button">Delete event</button>
+            </div>
+        </div>
+    </div>
+	
+	<script type="text/javascript" src="./js/planner_script.js"></script>
+	</body>
+</html>
